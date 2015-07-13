@@ -4,12 +4,12 @@
   app.config(function($routeProvider) {
     $routeProvider.when('/', {
       controller: 'tutorialController',
-      templateUrl: 'app/views/tutorial.html'
+      templateUrl: 'app/views/welcome.html'
     })
-    // .when('/songs', {
-    //   controller: 'songsController as songCtrl',
-    //   templateUrl: 'app/views/songs.html'
-    // })
+      .when('/castle', {
+        controller: 'tutorialController',
+        templateUrl: 'app/views/tutorial.html'
+      })
   });
 
 })(angular);

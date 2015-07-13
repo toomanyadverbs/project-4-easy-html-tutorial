@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="tutorialApp" lang="en">
+<html ng-app="tutorialApp">
     <head>
         <title>HTML/CSS Tutorial</title>
         <link rel="stylesheet" type="text/css" href="styles/style.css">
-        <script type="text/javascript" src="scripts/script.js"></script>
-        <script type='text/javascript' src='app/app.js'></script>
         <script type='text/javascript' src='bower_components/angular/angular.js'></script>
         <script type='text/javascript' src='bower_components/angular-route/angular-route.js'></script>
-        <script type="text/javascript" src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
-        <script type="text/javascript" src="bower_components/angular-ui-ace/ui-ace.js"></script>
+        <script type='text/javascript' src='app/tutorialData.js'></script>
+<!--         <script type="text/javascript" src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-ace/ui-ace.js"></script> -->
+        <script type='text/javascript' src='app/app.js'></script>
+        <script type='text/javascript' src='app/controllers/tutorialController.js'></script>
     </head>
     <body>
-        <div ui-ace="{
-            useWrapMode : true,
-            showGutter: false,
-            theme:'twilight',
-            mode: 'xml',
-            firstLineNumber: 5,
-            onLoad: aceLoaded,
-            onChange: aceChanged
-            }"></div>
         <div ng-view></div>
     </body>
 </html>

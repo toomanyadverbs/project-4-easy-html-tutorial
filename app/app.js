@@ -1,9 +1,9 @@
-(function tutorialAppIIFE(ang) {
-  var app = ang.module('tutorialApp', ['ui.ace']);
+(function tutorialAppIIFE(angular) {
+  var app = angular.module('tutorialApp', ['ngRoute']);
 
   app.config(function($routeProvider) {
     $routeProvider.when('/', {
-      controller: 'tutorialController as tutCtrl',
+      controller: 'tutorialController',
       templateUrl: 'app/views/tutorial.html'
     })
     // .when('/songs', {

@@ -1,0 +1,36 @@
+{
+  "name": "project-4-easy-html-tutorial",
+  "version": "0.0.0",
+  "homepage": "https://github.com/toomanyadverbs/project-4-easy-html-tutorial",
+  "authors": [
+    "toomanyadverbs <lark.grimes@gmail.com>"
+  ],
+  "description": "A very simple HTML & CSS tutorial aimed at getting kids interested and exploring.",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "angular-ui-ace",
+    "ace-builds"
+  ],
+  "dependencies": {
+    "angular": "1.4",
+    "angular-ui-ace": "0.2.3",
+    "ace-builds": "1.1.8"
+  },
+  "overrides": {
+    "ace-builds": {
+      "main": [
+        "src-min-noconflict/ace.js",
+        "src-min-noconflict/mode-json.js",
+        "src-min-noconflict/mode-yaml.js",
+        "src-min-noconflict/theme-idle_fingers.js",
+        "src-min-noconflict/worker-json.js"
+      ]
+    }
+  }
+}

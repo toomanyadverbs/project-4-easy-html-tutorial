@@ -1,15 +1,3 @@
-Questions - attributes: id(automatically)
-title
-content
-css
-for editor
-html
-for editor
-questionPosition(its position in the lesson order)
-nextQuestionId(id of the next question in the lesson)
-
-
-
 var tutorialData = [{
   id: 1,
   title: 'Q1',

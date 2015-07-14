@@ -6,6 +6,7 @@ var tutorialData = [{
     'darkslateblue'
   ],
   selectedAnswer: '',
+  selectedAnswerStyle: '',
   editorCSS: '.sky {background-color:lightblue, width: 100%, height: 400px}',
   editorHTML: '<div class="sky"></div>',
   questionPosition: 1,

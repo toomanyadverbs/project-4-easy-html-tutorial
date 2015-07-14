@@ -16,10 +16,19 @@
     // };
 
     this.submit = function(answerOption) {
-      return this.selectedAnswer = answerOption;
+      this.selectedAnswer = answerOption;
+      return this.selectedAnswer;
     };
 
-  };
+    this.makeOptionStyle = function(selectedAnswer) {
+      return this.selectedOptionStyle = "{'background-color':'" + this.selectedAnswer + "'}"
+    };
+
+    this.makeAnswerStyle = function(selectedAnswer) {
+      return this.selectedAnswerStyle = "{'background-color':'" + this.selectedAnswer + "'}"
+    };
+
+  }; //<-------END OF CONTROLLER
 
   // TutorialController.prototype.doSort = function(propName) {
   //   this.sortBy = propName;

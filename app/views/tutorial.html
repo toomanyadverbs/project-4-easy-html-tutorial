@@ -2,10 +2,7 @@
 <div class="workspace">
     <div id="tutorial" ng-controller="tutorialController as tutCtrl">
         <p>Tutorial</p>
-        <span>Hi! What's your name?  </span><input type="text" ng-model="name" placeholder="Enter name"></input>
-            <!-- 4. {{ Data Binding Expression }} -->
-        <p>Welcome, {{name}}!</p>
-        <button id="submitConsole">Submit</button>
+
         <!-- HERE GOES THE DATA -->
         <p>Id: {{tutCtrl.data[0].id}}</p>
         <p>Title: {{tutCtrl.data[0].title}}</p>
@@ -13,12 +10,10 @@
 
         <form ng-init="answerOptions = tutCtrl.data[0].answerOptions">
         <fieldset>
-        <legend>what coleur</legend>
-            <div ng-repeat="answerOption in answerOptions" class="optionDivs" ng-style="selectedAnswerStyle={'background-color':'answerOption'}">
-                <input type="radio" value="answerOption" ng-click="tutCtrl.submit(answerOption)"/>
-            </div>
+        <legend>sky colors options</legend>
+        <input type="button" ng-repeat="answerOption in answerOptions" value="{{answerOption}}" ng-click="tutCtrl.submit(answerOption)" ng-class="'{{answerOption}}'"/>
         </fieldset>
-        <div ng-style="selectedAnswerStyle"> Sky color: {{tutCtrl.data[0].selectedAnswer}}</div>
+        <div ng-class="tutCtrl.selectedAnswer"> Chosen color: {{tutCtrl.selectedAnswer}}</div>
         </form>
 
         <p>

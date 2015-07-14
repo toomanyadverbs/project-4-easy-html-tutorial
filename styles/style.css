@@ -43,3 +43,35 @@
   width: 20%;
   margin-left: 90%;
 }
+
+/*
+-----------------------------
+----Answer Option Classes----
+-----------------------------*/
+
+.optionDivs {
+  width: 40px;
+  height:1em;
+  display: inline;
+  border: 1px solid gray;
+}
+
+.lightblue {
+  background-color:lightblue;
+}
+
+.dodgerblue {
+  background-color:dodgerblue;
+}
+
+.pink {
+  background-color:pink;
+}
+
+.mediumpurple {
+  background-color:mediumpurple;
+}
+
+.darkslateblue {
+  background-color:darkslateblue;
+}

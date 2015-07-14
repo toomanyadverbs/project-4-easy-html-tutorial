@@ -1,7 +1,11 @@
 var tutorialData = [{
   id: 1,
   title: 'Q1',
-  content: 'First, we will need the sky. What color would you like the sky to be?',
+  question: 'First, we will need the sky. What color would you like the sky to be?',
+  answerOptions: ['lightblue', 'dodgerblue', 'pink', 'mediumpurple',
+    'darkslateblue'
+  ],
+  selectedAnswer: '',
   editorCSS: '.sky {background-color:lightblue, width: 100%, height: 400px}',
   editorHTML: '<div class="sky"></div>',
   questionPosition: 1,

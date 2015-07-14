@@ -3,15 +3,22 @@
     this.sortBy = "id";
     this.reverse = false;
     this.data = data;
-    // this.aceLoaded = function(_editor) {
-    //   var _session = _editor.getSession();
-    //   var _renderer = _editor.renderer;
-    //   // Options
-    //   //_editor.setReadOnly(true);
+
+
+    // this.getCSS = function(inputFieldValue) {
+    //   //$pristine = field has never been changed
+    //   if (inputFieldValue.$pristine) {
+    //     return "";
+    //   }
+    //   //$valid = will be true if the field is valid
+    //   // 'valid' = meets all the contraints that have been attached to the field. (minlength, pattern, required, etc.)
+    //   return inputFieldValue.$valid ? "fieldValid" : "fieldInvalid";
     // };
-    // this.aceChanged = function(e) {
-    //   //
-    // };
+
+    this.submit = function(answerOption) {
+      return this.selectedAnswer = answerOption;
+    };
+
   };
 
   // TutorialController.prototype.doSort = function(propName) {

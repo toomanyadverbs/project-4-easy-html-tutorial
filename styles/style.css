@@ -24,6 +24,7 @@
   height: 100%;
   width: 20%;
   display: inline-block;
+  margin: 10px;
 
 }
 
@@ -36,6 +37,7 @@
   height: 100%;
   width: 50%;
   display: inline-block;
+  margin: 10px;
 }
 
 #view {
@@ -74,4 +76,24 @@
 
 .darkslateblue {
   background-color:darkslateblue;
+}
+
+.brown {
+  background-color:brown;
+}
+
+.burlywood {
+  background-color:burlywood;
+}
+
+.darkgray {
+  background-color:darkgray;
+}
+
+.darkgreen {
+  background-color:darkgreen;
+}
+
+.aliceblue {
+  background-color:aliceblue;
 }

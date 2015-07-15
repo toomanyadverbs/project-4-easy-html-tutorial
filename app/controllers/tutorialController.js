@@ -2,8 +2,11 @@
   var TutorialController = function() {
     this.sortBy = "id";
     this.reverse = false;
-    this.data = data;
-
+    this.questions = data;
+    var currentElement = 0;
+    this.question = data[0];
+    // this.qAnId = data[i].id;
+    // this.selectedQuestion;
 
     // this.getCSS = function(inputFieldValue) {
     //   //$pristine = field has never been changed
@@ -17,7 +20,8 @@
 
     this.submit = function(answerOption) {
       this.selectedAnswer = answerOption;
-      return this.selectedAnswer;
+      currentElement++;
+      this.question = this.questions[currentElement];
     };
 
     this.makeOptionStyle = function(selectedAnswer) {

@@ -4,14 +4,14 @@
         <p>Tutorial</p>
 
         <!-- HERE GOES THE DATA -->
-        <p>Id: {{tutCtrl.data[0].id}}</p>
-        <p>Title: {{tutCtrl.data[0].title}}</p>
-        <p>Content: {{tutCtrl.data[0].question}}</p>
+        <p>Id: {{tutCtrl.question.id}}</p>
+        <p>Title: {{tutCtrl.question.title}}</p>
+        <p>Content: {{tutCtrl.question.question}}</p>
 
-        <form ng-init="answerOptions = tutCtrl.data[0].answerOptions">
+        <form >
         <fieldset>
         <legend>sky colors options</legend>
-        <input type="button" ng-repeat="answerOption in answerOptions" value="{{answerOption}}" ng-click="tutCtrl.submit(answerOption)" ng-class="'{{answerOption}}'"/>
+        <input type="button" ng-repeat="answerOption in tutCtrl.question.answerOptions" value="{{answerOption}}" ng-click="tutCtrl.submit(answerOption)" ng-class="'{{answerOption}}'"/>
         </fieldset>
         <div ng-class="tutCtrl.selectedAnswer"> Chosen color: {{tutCtrl.selectedAnswer}}</div>
         </form>

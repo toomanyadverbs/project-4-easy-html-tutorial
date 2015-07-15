@@ -19,21 +19,28 @@
         <p>
 
     </div>
-    <div id="editor">function foo(items) {
-                var x = "All this is syntax highlighted";
-                return x;
-                }
-    </div>
- <!--    <div ui-ace="{
+    <div id="codeEditors">
+        <div id="editor1" ui-ace="{
             useWrapMode : true,
-            showGutter: false,
-            theme:'twilight',
-            mode: 'xml',
-            firstLineNumber: 5,
+            showGutter: true,
+            theme:'katzenmilch',
+            mode: 'html',
+            firstLineNumber: 1,
             onLoad: aceLoaded,
             onChange: aceChanged
-            }"></div> -->
-
+            }"> "Hello! I am the code editor for HTML!"
+        </div>
+        <div id="editor2" ui-ace="{
+            useWrapMode : true,
+            showGutter: true,
+            theme:'cobalt',
+            mode: 'css',
+            firstLineNumber: 1,
+            onLoad: aceLoaded,
+            onChange: aceChanged
+            }"> "And I am the code editor for CSS!"
+        </div>
+    </div>
     <div id="view">
         <p>View</p>
     </div>

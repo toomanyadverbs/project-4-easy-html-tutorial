@@ -1,22 +1,21 @@
 (function tutorialControllerIIFE(data, ang) {
-  var TutorialController = function() {
+  var TutorialController = function(tutorialFactory, appSettings) {
     this.sortBy = "id";
     this.reverse = false;
+    this.lessons = tutorialsFactory.lessons;
+    this.questions = tutorialsFactory.questions;
+    this.answers = tutorialsFactory.answers;
     this.questions = data;
     var currentElement = 0;
     this.question = data[0];
-    // this.qAnId = data[i].id;
-    // this.selectedQuestion;
 
-    // this.getCSS = function(inputFieldValue) {
-    //   //$pristine = field has never been changed
-    //   if (inputFieldValue.$pristine) {
-    //     return "";
-    //   }
-    //   //$valid = will be true if the field is valid
-    //   // 'valid' = meets all the contraints that have been attached to the field. (minlength, pattern, required, etc.)
-    //   return inputFieldValue.$valid ? "fieldValid" : "fieldInvalid";
-    // };
+    function init() {
+      // Init the customers from the factory
+      //this.customers = customersFactory.getCustomers();
+      tutorialsFactory.getTutorials();
+    }
+
+    init();
 
     this.submit = function(answerOption) {
       this.selectedAnswer = answerOption;
@@ -25,11 +24,11 @@
     };
 
     this.makeOptionStyle = function(selectedAnswer) {
-      return this.selectedOptionStyle = "{'background-color':'" + this.selectedAnswer + "'}"
+      this.selectedOptionStyle = "{'background-color':'" + this.selectedAnswer + "'}"
     };
 
     this.makeAnswerStyle = function(selectedAnswer) {
-      return this.selectedAnswerStyle = "{'background-color':'" + this.selectedAnswer + "'}"
+      this.selectedAnswerStyle = "{'background-color':'" + this.selectedAnswer + "'}"
     };
 
   }; //<-------END OF CONTROLLER
@@ -39,6 +38,8 @@
   //   this.reverse = !this.reverse;
   // };
 
+  TutorialController.$inject = ['tutorialsFactory', 'appSettings'];
+
   ang.module('tutorialApp').controller('tutorialController', TutorialController);
 
-})(tutorialData, angular);
+})();

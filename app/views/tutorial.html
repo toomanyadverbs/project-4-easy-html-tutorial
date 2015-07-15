@@ -1,17 +1,20 @@
-<div class="headerDiv"></div>
-<div class="workspace">
-    <div id="tutorial" ng-controller="tutorialController as tutCtrl">
+<div class="container">
+<div class="row headerDiv"><div class="col-md-12">
+    <h1>Build a Castle!</h1>
+</div></div>
+<div class="workspace row">
+    <div id="tutorial" class="col-md-3" ng-controller="tutorialController as tutCtrl">
         <p>Tutorial</p>
 
         <!-- HERE GOES THE DATA -->
-        <p>Id: {{tutCtrl.question.id}}</p>
-        <p>Title: {{tutCtrl.question.title}}</p>
-        <p>Content: {{tutCtrl.question.question}}</p>
+        <p>Id: {{tutCtrl.question.id}}</p><!-- Question-->
+        <p>Title: {{tutCtrl.question.title}}</p><!-- Title-->
+        <h3>{{tutCtrl.question.question}}</h3><!-- Question-->
 
         <form >
         <fieldset>
-        <legend>sky colors options</legend>
-        <input type="button" ng-repeat="answerOption in tutCtrl.question.answerOptions" value="{{answerOption}}" ng-click="tutCtrl.submit(answerOption)" ng-class="'{{answerOption}}'"/>
+        <legend></legend>
+        <input type="button" class="btn btn-block" ng-repeat="answerOption in tutCtrl.question.answerOptions" value="{{answerOption}}" ng-click="tutCtrl.submit(answerOption)" ng-class="'{{answerOption}}'"/>
         </fieldset>
         <div ng-class="tutCtrl.selectedAnswer"> Chosen color: {{tutCtrl.selectedAnswer}}</div>
         </form>
@@ -19,7 +22,7 @@
         <p>
 
     </div>
-    <div id="codeEditors">
+    <div id="codeEditors" class="col-md-4">
         <div id="editor1" ui-ace="{
             useWrapMode : true,
             showGutter: true,
@@ -41,8 +44,9 @@
             }"> "And I am the code editor for CSS!"
         </div>
     </div>
-    <div id="view">
+    <div id="codeView" class="col-md-4">
         <p>View</p>
     </div>
 </div>
-<div class="footerDiv"></div>
+<div class="row footerDiv"><div class="col-md-12"><p>Foot</p></div></div>
+</div>

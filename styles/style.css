@@ -1,54 +1,52 @@
-.ace_editor { height: 200px;
-  width: 50%;
-  display: block;
-  margin: 10px 10px 10px 35%;
+body {
+  background-color:#1abc9c;
 }
 
-.head {
-  position:absolute;
-  top:0;
-  height: 30px;
-  display:block;
+.ace_editor { height: 200px;
+  border: 6px #95a5a6 solid;
+}
+
+.headerDiv {
+  margin: 1em 2em 0em 2em;
+  background-color:#16a085;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
 }
 
 .workspace {
-  margin-top:30px;
+  padding:2em;
+  background-color:#bdc3c7;
+  border-radius: 2em;
+  box-shadow: 8px 8px #95a5a6;
+  border: 1px #BBBBBB solid;
 }
 
-.foot {
-
+.footerDiv {
+  height:2em;
+  margin: 0em 2em 1em 2em;
+  background-color:#16a085;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
 }
 
 #tutorial {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 15%;
-  display: inline-block;
-  margin: 10px;
-
+  margin:1em;
 }
 
-/*#editor {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 35%;
-  height: 100%;
-  width: 50%;
-  display: inline-block;
-  margin: 10px;
+#codeEditors {
+  background-color:#95a5a6;
+  padding: 0px;
+  border-top: 6px #7f8c8d solid;
+  border-left: 6px #7f8c8d solid;
+  margin: .5em;
 }
-*/
-#view {
-  height: 100%;
-  width: 35%;
-  margin-left: 90%;
-  display: inline-block;
+
+#codeView {
+  height: 400px;
+  background-color:#95a5a6;
+  margin: .5em;
+  border-top: 6px #7f8c8d solid;
+  border-left: 6px #7f8c8d solid;
 }
 
 /*

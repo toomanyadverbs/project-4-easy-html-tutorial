@@ -1,12 +1,16 @@
-<div class="headerDiv">
-  <h1>Lindsey's Easy HTML Tutorial</h1>
-</div>
-<div>
-  <h2>Welcome!</h2>
-  <span>Hi! What's your name?  </span><input type="text" ng-model="name" placeholder="Enter name"></input>
+<div class="container">
+<div class="row headerDiv"><div class="col-md-12">
+    <h1>Lindsey's Easy HTML Tutorial</h1>
+</div></div>
+<div class="workspace row">
+    <div class="col-md-12">
+      <h2>Welcome!</h2>
+      <span>Hi! What's your name?  </span><input type="text" ng-model="name" placeholder="Type your name here"></input>
             <!-- 4. {{ Data Binding Expression }} -->
-  <p>Welcome, {{name}}!</p>
-  <p>Want to build your own webpage? Want to learn the very basics of HTML and CSS, two markup languages that all web pages are built on? Start here!</p>
+      <p>Welcome, {{name}}!</p>
+      <p>Want to build your own webpage? Want to learn the very basics of HTML and CSS, two markup languages that all web pages are built on? Start right here!</p>
   <a href="#/castle">Let's build a castle!</a>
+  </div>
 </div>
 <div class="footerDiv"></div>
+</div>

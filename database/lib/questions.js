@@ -1,8 +1,11 @@
 // var mongoose = require('./mongoose-tutorial.js');
 
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+//mongoose.connect('mongodb://localhost/tutorial');
+
 var Answer = require('./answers.js');
+
+var Schema = mongoose.Schema;
 
 var questionSchema = new Schema({
   id: {

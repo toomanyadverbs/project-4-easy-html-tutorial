@@ -1,5 +1,5 @@
 (function tutorialAppIIFE(angular) {
-  var app = angular.module('tutorialApp', ['ngRoute', /*'ui.bootstrap',*/ 'ui.ace']);
+  var app = angular.module('tutorialApp', ['ngRoute', 'ui.ace']);
 
   app.config(function($routeProvider) {
     $routeProvider.when('/', {

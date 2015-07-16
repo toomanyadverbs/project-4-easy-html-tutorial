@@ -1,13 +1,13 @@
-(function tutorialControllerIIFE(data, ang) {
-  var TutorialController = function(tutorialFactory, appSettings) {
+(function tutorialControllerIIFE() {
+  var TutorialController = function(tutorialsFactory, appSettings) {
     this.sortBy = "id";
     this.reverse = false;
     this.lessons = tutorialsFactory.lessons;
     this.questions = tutorialsFactory.questions;
     this.answers = tutorialsFactory.answers;
-    this.questions = data;
+    // this.questions = data;
     var currentElement = 0;
-    this.question = data[0];
+    this.question = this.questions.id(1);
 
     function init() {
       // Init the customers from the factory
@@ -40,6 +40,6 @@
 
   TutorialController.$inject = ['tutorialsFactory', 'appSettings'];
 
-  ang.module('tutorialApp').controller('tutorialController', TutorialController);
+  angular.module('tutorialApp').controller('tutorialController', TutorialController);
 
 })();

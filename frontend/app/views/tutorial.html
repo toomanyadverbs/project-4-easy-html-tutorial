@@ -7,14 +7,14 @@
         <p>Tutorial</p>
 
         <!-- HERE GOES THE DATA -->
-        <p>Id: {{tutCtrl.question.id}}</p><!-- Question-->
-        <p>Title: {{tutCtrl.question.title}}</p><!-- Title-->
-        <h3>{{tutCtrl.question.question}}</h3><!-- Question-->
+        <p>Id: {{tutCtrl.currentQuestion.id}}</p><!-- Question-->
+        <p>Title: {{tutCtrl.currentQuestion.content}}</p>
+        <h3>{{tutCtrl.currentQuestion.question}}</h3><!-- Question-->
 
         <form >
         <fieldset>
         <legend></legend>
-        <input type="button" class="btn btn-block" ng-repeat="answerOption in tutCtrl.question.answerOptions" value="{{answerOption}}" ng-click="tutCtrl.submit(answerOption)" ng-class="'{{answerOption}}'"/>
+        <input type="button" class="btn btn-block" ng-repeat="answerOption in tutCtrl.currentQuestion.answerOptions" value="{{answerOption}}" ng-click="tutCtrl.submit(answerOption)" ng-class="'{{answerOption}}'"/>
         </fieldset>
         <div ng-class="tutCtrl.selectedAnswer"> Chosen color: {{tutCtrl.selectedAnswer}}</div>
         </form>

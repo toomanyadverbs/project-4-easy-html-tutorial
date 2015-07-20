@@ -16,6 +16,15 @@ var Question = require('./lib/questions.js');
 var Answer = require('./lib/answers.js');
 var Lesson = require('./lib/lessons.js');
 
+var corsOptions = {
+  methods: ['GET', 'PUT', 'POST'],
+  origin: 'http://localhost:5000',
+  credentials: true
+};
+
+app.use(cors(corsOptions));
+
+
 // app.use('/', routes);
 // app.use('/castleTutorial', castleTutorial);
 
@@ -59,6 +68,17 @@ app.get('/lessons', function(req, res) {
   })
 });
 
+app.get('/tutorialCastle', function(req, res) {
+  Lesson.find({
+    "name": "Build A Castle"
+  }, function(error, lessons) {
+    if (error) {
+      console.error(error);
+      res.sendStatus(404);
+    }
+    res.json(lessons);
+  })
+});
 
 // error handlers
 

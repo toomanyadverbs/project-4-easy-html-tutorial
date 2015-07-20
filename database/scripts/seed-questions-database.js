@@ -11,6 +11,27 @@ var removeQuestions = function(done) {
 };
 
 async.series([
+
+    function(callback) {
+        ...
+      callback(error, result);
+    },
+    function(callback) {
+        ...
+      callback(error, result);
+    },
+    function(callback) {
+        ...
+      callback(error, result);
+    },
+  ],
+  function(err, results) {
+      ...
+  }
+);
+
+
+async.series([
   removeQuestions,
   function(done) {
     Question.create({
@@ -19,6 +40,13 @@ async.series([
       answerOptions: ["55a6c9973100e53929e32384"],
       questionPosition: 1,
       nextQuestionId: 2
+    }, done);
+    Question.create({
+      id: 2,
+      content: 'Then the castle will need ground to stand on!',
+      answerOptions: [],
+      questionPosition: 2,
+      nextQuestionId: 3
     }, done);
   }
 ], function(err) {

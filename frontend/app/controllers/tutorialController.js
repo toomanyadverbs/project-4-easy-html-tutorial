@@ -1,18 +1,42 @@
 (function tutorialControllerIIFE() {
   var TutorialController = function(tutorialsFactory, appSettings) {
-    this.sortBy = "id";
-    this.reverse = false;
-    this.lessons = tutorialsFactory.lessons;
-    this.questions = tutorialsFactory.questions;
-    this.answers = tutorialsFactory.answers;
+    var vm = this;
+    vm.sortBy = "id";
+    vm.reverse = false;
+    vm.lessons = [];
+    vm.questions = [];
+    vm.answers = [];
+    vm.currentQuestion;
+
     // this.questions = data;
     var currentElement = 0;
-    this.question = this.questions.id(1);
+    //this.question = this.questions.id[1];
 
     function init() {
       // Init the customers from the factory
       //this.customers = customersFactory.getCustomers();
-      tutorialsFactory.getTutorials();
+      tutorialsFactory.getQuestions()
+        .success(function(response) {
+          response.forEach(function(question) {
+            vm.questions.push(question);
+          });
+          vm.currentQuestion = vm.questions[currentElement];
+        });
+      tutorialsFactory.getAnswers()
+        .success(function(response) {
+          response.forEach(function(answer) {
+            vm.answers.push(answer);
+          });
+          vm.currentAnswer = vm.answers[currentElement];
+        });
+      tutorialsFactory.getLessons()
+        .success(function(response) {
+          response.forEach(function(lesson) {
+            vm.lessons.push(lesson);
+          });
+          vm.currentLesson = vm.lessons[currentElement];
+        });
+
     }
 
     init();
@@ -20,7 +44,8 @@
     this.submit = function(answerOption) {
       this.selectedAnswer = answerOption;
       currentElement++;
-      this.question = this.questions[currentElement];
+      vm.currentQuestion = vm.questions[vm.currentQuestion.nextQuestionId - 1];
+      //this.question = this.questions[currentElement];
     };
 
     this.makeOptionStyle = function(selectedAnswer) {

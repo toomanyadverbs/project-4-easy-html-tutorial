@@ -8,6 +8,10 @@ var answerSchema = new Schema({
     type: Number,
     required: true
   },
+  questionId: {
+    type: Number,
+    required: true
+  },
   buttonStyle: {
     type: String
   },

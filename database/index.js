@@ -11,6 +11,7 @@ var path = require('path');
 // var async = require('async');
 
 mongoose.connect('mongodb://localhost/tutorial');
+//mongoose.connect(config.mongo.uri);
 
 var Question = require('./lib/questions.js');
 var Answer = require('./lib/answers.js');

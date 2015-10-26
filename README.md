@@ -1,6 +1,6 @@
 # Easy HTML & CSS Tutorial
 
-An easy single-page tutorial for basic HTML and CSS, aimed particularly at getting girls to explore some code.
+An easy single-page tutorial for basic HTML and CSS, aimed particularly at getting girls to explore some code. Built in Angular with the embeddable code editor Ace; a work in progress.
 
 
 ## User Stories:
